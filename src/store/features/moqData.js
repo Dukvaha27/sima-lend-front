@@ -6,12 +6,14 @@ export const initialState = {
   ],
   fields: [
     {
+      id:0,
       label: "Введите логин",
       name: "login",
       stepId: 0,
       required: true,
     },
     {
+      id:1,
       label: "Введите почту",
       name: "email",
       type: "email",
@@ -19,6 +21,7 @@ export const initialState = {
       required: true,
     },
     {
+      id:2,
       label: "Введите пароль",
       name: "password",
       type: "password",
@@ -26,6 +29,7 @@ export const initialState = {
       required: true,
     },
     {
+      id:3,
       label: "Повторите пароль",
       name: "repeatPassword",
       type: "password",
@@ -33,30 +37,37 @@ export const initialState = {
       required: true,
     },
     {
+      id:4,
       label: "Страна",
       name: "country",
       stepId: 1,
       required: true,
     },
     {
+
+      id:5,
       label: "Город",
       name: "city",
       stepId: 1,
       required: true,
     },
     {
+      id:6,
       label: "Улица",
       name: "street",
       stepId: 1,
       required: false,
     },
     {
+
+      id:7,
       label: "Дом",
       name: "house",
       stepId: 1,
       required: false,
     },
     {
+      id:8,
       label: "Номер телефона",
       name: "phone",
       type: "number",
@@ -65,6 +76,7 @@ export const initialState = {
       required: true,
     },
     {
+      id:9,
       label: "Введите код",
       name: "code",
       stepId: 2,

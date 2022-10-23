@@ -1,11 +1,21 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { fieldSelector, stepsSelector } from "../store/features/fieldData";
+import React, { useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addField,
+  fieldSelector,
+  stepsSelector,
+} from "../store/features/fieldData";
 
 const useData = () => {
+  const dispatch = useDispatch();
   const fields = useSelector(fieldSelector);
   const steps = useSelector(stepsSelector);
-  return { fields, steps };
+
+  const addFieldHandler = useCallback((fieldObj) => {
+    dispatch(addField(fieldObj));
+  }, []);
+
+  return { fields, steps, addFieldHandler };
 };
 
 export default useData;

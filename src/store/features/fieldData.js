@@ -4,9 +4,16 @@ import { initialState } from "./moqData";
 const fieldDataSlice = createSlice({
   name: "fields",
   initialState,
+  reducers:{
+    addField:(state, action) => {
+      state.fields.push(action.payload)
+    }
+  }
 });
 
-const { reducer } = fieldDataSlice;
+const { reducer, actions } = fieldDataSlice;
+
+export const { addField } = actions;
 
 const fieldData = (state) => state.stepReducer;
 
